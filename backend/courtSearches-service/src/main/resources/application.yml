@@ -1,0 +1,26 @@
+server:
+  port: 9003
+
+spring:
+  application:
+    name: COURTSEARCHES-SERVICE
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/Checkr
+    username: root
+    password: root
+
+  flyway:
+    baseline-on-migrate: true
+
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    preferIpAddress: false
+    hostname: localhost
