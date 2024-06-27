@@ -26,8 +26,8 @@ jobs:
 
     - name: Build and push Docker image
       run: |
-        docker build -t ghcr.io/${{ github.repository }}/frontend:latest ./frontend
-        docker push ghcr.io/${{ github.repository }}/frontend:latest
+        docker build -t ghcr.io/${{ github.repository }}/bc-125-checkr-frontend:latest ./frontend
+        docker push ghcr.io/${{ github.repository }}/bc-125-checkr-frontend:latest
 
   deploy:
     runs-on: ubuntu-latest
