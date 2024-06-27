@@ -1,17 +1,8 @@
-FROM node:18.2.0
-
+FROM node:20.11.1
 WORKDIR /app
-
 COPY package*.json ./
-
 RUN npm install
-
 COPY . .
-
+RUN npm run build
 EXPOSE 3000
-
-COPY start.sh /app/start.sh
-
-RUN chmod +x /app/start.sh
-
-CMD ["/app/start.sh"]
+CMD ["npm", "start"]
